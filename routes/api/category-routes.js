@@ -14,17 +14,17 @@ router.get('/', (req, res) => {
     ],
     include: {
       model: Product,
-      attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+      attributes: ['product_name', 'price', 'stock', 'category_id']
     }
   })
-  .then(dbCatData => res.json(dbCatData))
+  .then(dbCatData => res.status(200).json(dbCatData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
   });
 });
 
-// READ a specific Category
+// READ one Category
 router.get('/:id', (req, res) => {
   Category.findOne({
     where: {
@@ -53,19 +53,19 @@ router.get('/:id', (req, res) => {
   });
 });
 
-// CREATE a new Category
+// CREATE new Category
 router.post('/', (req, res) => {
   Category.create({
     category_name: req.body.category_name
   })
-  .then(dbCatData => res.json(dbCatData))
+  .then(dbCatData => res.status(200).json(dbCatData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
   });
 });
 
-// UPDATE a single Category's name
+// UPDATE one Category (only thing to update is category_name)
 router.put('/:id', (req, res) => {
   Category.update(
     {
@@ -82,7 +82,7 @@ router.put('/:id', (req, res) => {
       res.status(404).json({ message: 'No Category found with this id '});
       return;
     }
-    res.json(dbCatData);
+    res.status(200).json(dbCatData);
   })
   .catch(err => {
     console.log(err);
@@ -102,7 +102,7 @@ router.delete('/:id', (req, res) => {
       res.status(404).json({ message: 'No Category found with this id' });
       return;
     }
-    res.json(dbCatData);
+    res.status(200).json(dbCatData);
   })
   .catch(err => {
     console.log(err);
