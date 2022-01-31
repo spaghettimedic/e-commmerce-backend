@@ -5,7 +5,7 @@ This E-Commerce node application is just a demonstration of the back-end functio
 
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage)
+* [Usage and Walk-through Videos](#usage)
 * [Contributing](#contributing)
 * [Questions](#questions)
 * [Deployed Application](#deployed-application)
@@ -20,6 +20,8 @@ Create API calls in your client as shown below using the API routes. You can per
 ![plot](./resources/images/CREATE_Category.png)
 ![plot](./resources/images/UPDATE_Category.png)
 ![plot](./resources/images/DELETE_Category.png)
+
+[This walk-through video](https://watch.screencastify.com/v/G0uQyqVHjAltLEXhgRp4) demonstrates how I created the database and its schema, as well as the API calls showing seeded data in Insomnia (READ routes only). [This continued walk-through video](https://watch.screencastify.com/v/RK5n4Xwtr7ZLceZN0gZK) demonstrates more API calls in Insomnia being performed (CREATE, UPDATE, and DELETE routes).
 
 ## Contributing
 This is an open source project and as such, please follow the [Contributor Covenant](https://www.contributor-covenant.org/).
